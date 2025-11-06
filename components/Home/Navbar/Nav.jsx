@@ -8,7 +8,7 @@ import {HiBars3BottomRight} from 'react-icons/hi2'
 import { useEffect, useState } from 'react'
 
 
-const Nav = () => {
+const Nav = ({openNav}) => {
     const [navBg, setNavBg] = useState(false);
 
     useEffect(() => {
@@ -50,7 +50,7 @@ const Nav = () => {
                     <span>Download CV</span>
                 </button>
                 
-                <HiBars3BottomRight className="w-8 h-8 text-white cursor-pointer lg:hidden" /> 
+                <HiBars3BottomRight onClick={openNav} className="w-8 h-8 text-white cursor-pointer lg:hidden" /> 
             </div>
         </div>
     </div>
