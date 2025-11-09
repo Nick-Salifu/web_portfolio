@@ -37,7 +37,31 @@ const ClientReview = () => {
                 autoPlay={true}
                 autoPlaySpeed={4000}
             >
-                <ClientReviewCard />
+                <ClientReviewCard
+                    image="/images/c1.png"
+                    name="Victoria Andrews"
+                    role="CEO, Landscape"
+                 />
+                <ClientReviewCard
+                    image="/images/c2.png"
+                    name="Adam Stones"
+                    role="Product manager"
+                 />
+                <ClientReviewCard
+                    image="/images/c3.png"
+                    name="Jessica Doe"
+                    role="CEO, Hamburger"
+                 />
+                <ClientReviewCard
+                    image="/images/c1.png"
+                    name="Ema Sunderland"
+                    role="Software Engineer"
+                 />
+                <ClientReviewCard
+                    image="/images/c5.png"
+                    name="John Oluseyi"
+                    role="UI/UX Designer"
+                 />
             </Carousel>
         </div>
     </div>
