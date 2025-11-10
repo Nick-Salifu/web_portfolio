@@ -1,7 +1,33 @@
+import { useState } from "react"
 import { BiEnvelope, BiMap, BiPhone } from "react-icons/bi"
 import { FaFacebookF, FaGithub, FaInstagram, FaTwitter } from "react-icons/fa"
 
 const Contact = () => {
+    const [result, setResult] = useState("");
+
+    const onSubmit = async (event) => {
+        event.preventDefault();
+        setResult("Sending...");
+        const formData = new FormData(event.target);
+
+        formData.append("access_key", "d5bb83e8-f4b2-4b58-a9bd-12a61f744b6c");
+
+        const response = await fetch("https://api.web3forms.com/submit", {
+            method: "POST",
+            body: formData
+        });
+
+        const data = await response.json();
+
+        if (data.success) {
+            setResult("Form submitted successfully");
+            event.target.reset();
+        } else {
+            console.log("Error", data);
+            setResult(data.message);
+        }
+    }
+
     return (
         <div id="contact" className="py-16">
             <div className="w-[90%] md:w-[80%] lg:w-[70%] grid grid-cols-1 items-center gap-10 mx-auto lg:grid-cols-2">
@@ -33,33 +59,45 @@ const Contact = () => {
                     {/* Social */}
                     <div className="flex items-center space-x-3 mt-8">
                         <div className="w-12 h-12 bg-blue-950/60 rounded-full flex items-center justify-center flex-col cursor-pointer hover:bg-blue-800 transition-all duration-300">
-                            <FaFacebookF className="w-6 h-6 text-white" />
+                            <a target="_blank" href="https://www.facebook.com/salifuswenky.friday/">
+                                <FaFacebookF className="w-6 h-6 text-white" />
+                            </a>
                         </div>
                         <div className="w-12 h-12 bg-blue-950/60 rounded-full flex items-center justify-center flex-col cursor-pointer hover:bg-sky-400 transition-all duration-300">
-                            <FaTwitter className="w-6 h-6 text-white" />
+                            <a target="_blank" href="https://x.com/Captain_swenky">
+                                <FaTwitter className="w-6 h-6 text-white" />
+                            </a>
                         </div>
                         <div className="w-12 h-12 bg-blue-950/60 rounded-full flex items-center justify-center flex-col cursor-pointer hover:bg-black transition-all duration-300">
-                            <FaGithub className="w-6 h-6 text-white" />
+                            <a target="_blank" href="https://github.com/Nick-Salifu">
+                                <FaGithub className="w-6 h-6 text-white" />
+                            </a>
                         </div>
                         <div className="w-12 h-12 bg-blue-950/60 rounded-full flex items-center justify-center flex-col cursor-pointer hover:bg-pink-400 transition-all duration-300">
-                            <FaInstagram className="w-6 h-6 text-white" />
+                            <a target="_blank" href="https://www.instagram.com/_niick04/">
+                                <FaInstagram className="w-6 h-6 text-white" />
+                            </a>
                         </div>
                     </div>
                 </div>
 
                 {/* Form Section */}
-                <div
+                <form
                     className="p-5 md:p-10 rounded-lg bg-[#131332]"
                     data-aos="zoom-in" 
                     data-aos-anchor-placement="top-center" 
                     data-aos-delay="100"
+                    onSubmit={onSubmit}
                 >
-                    <input type="text" placeholder="Name" className="px-4 py-3.5 text-white outline-none rounded-md w-full bg-[#363659] placeholder:text-white/70" />
-                    <input type="email" placeholder="Email Address" className="px-4 mt-6 py-3.5 text-white outline-none rounded-md w-full bg-[#363659] placeholder:text-white/70" />
-                    <input type="number" placeholder="Mobile Number" className="px-4 mt-6 py-3.5 text-white outline-none rounded-md w-full bg-[#363659] placeholder:text-white/70" />
-                    <textarea placeholder="Your Message" className="px-4 mt-6 py-3.5 text-white outline-none rounded-md w-full bg-[#363659] placeholder:text-white/70 h-40"></textarea>
+                    <input type="text" placeholder="Name" className="px-4 py-3.5 text-white outline-none rounded-md w-full bg-[#363659] placeholder:text-white/70" name="name" />
+                    <input name="email" type="email" placeholder="Email Address" className="px-4 mt-6 py-3.5 text-white outline-none rounded-md w-full bg-[#363659] placeholder:text-white/70" />
+                    <input name="Mobile" type="text" placeholder="Mobile Number" className="px-4 mt-6 py-3.5 text-white outline-none rounded-md w-full bg-[#363659] placeholder:text-white/70" />
+                    <textarea name="message" placeholder="Your Message" className="px-4 mt-6 py-3.5 text-white outline-none rounded-md w-full bg-[#363659] placeholder:text-white/70 h-40"></textarea>
                     <button className="mt-8 px-12 py-4 bg-blue-950 text-white hover:bg-blue-900 rounded-full transition-all duration-300 cursor-pointer">Send Message</button>
-                </div>
+                    <p className="text-white font-semibold text-sm mt-3">
+                        {result}
+                    </p>
+                </form>
             </div>
         </div>
     )
