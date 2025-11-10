@@ -23,7 +23,7 @@ const Home = () => {
         anchorPlacement: "top-bottom"
       })
     }
-    initAOS();
+    initAOS(); 
   }, [])
 
   return (

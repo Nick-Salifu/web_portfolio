@@ -11,7 +11,7 @@ const Hero = () => {
         <ParticlesHero />
         <div className="relative z-10 flex flex-col items-center">
             <Image 
-              src="/images/s1.jpg" 
+              src="/images/n1.JPG" 
               alt="hero image" 
               width={150} 
               height={150} 
@@ -19,12 +19,12 @@ const Hero = () => {
               data-aos="fade-up"
               />
             
-            <h1 data-aos="fade-up" data-aos-delay="200" className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl mt-6 text-center font-bold tracking-wide">
-                Creating web products,<br /> brands {" "} 
+            <h1 data-aos="fade-up" data-aos-delay="200" className="text-2xl sm:text-4xl lg:text-5xl mt-6 text-center font-bold tracking-wide">
+                Building modern web solutions,<br /> brands {" "} 
                 <span className="text-cyan-200">and experiences.</span>
             </h1>
             <h2 data-aos="fade-up" data-aos-delay="400" className="mt-4 text-sm px-2 text-center sm:text-2xl font-medium flex items-center">
-                Hi! I am Nick - A passionate
+                Hi I am Nick - A passionate
                 <span className="text-cyan-200 font-bold">
                       <Typerwriter options={{
                           strings: [

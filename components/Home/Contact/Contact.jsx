@@ -3,15 +3,15 @@ import { FaFacebookF, FaGithub, FaInstagram, FaTwitter } from "react-icons/fa"
 
 const Contact = () => {
     return (
-        <div className="py-16">
+        <div id="contact" className="py-16">
             <div className="w-[90%] md:w-[80%] lg:w-[70%] grid grid-cols-1 items-center gap-10 mx-auto lg:grid-cols-2">
                 {/* Text section */}
                 <div>
                     <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-200">
-                        Schedule a call with me to see how I can help
+                        Have a project in mind? Let’s Talk!
                     </h1>
                     <p className="text-gray-400 mt-6 text-base lg:text-lg">
-                        Reach out to me today let's see how I can help you achieve your goals
+                        Let’s work together and build something amazing, reach out to me today!
                     </p>
 
                     {/* Info */}
