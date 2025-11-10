@@ -48,11 +48,16 @@ const Contact = () => {
                 </div>
 
                 {/* Form Section */}
-                <div className="p-5 md:p-10 rounded-lg bg-[#131332]">
+                <div
+                    className="p-5 md:p-10 rounded-lg bg-[#131332]"
+                    data-aos="zoom-in" 
+                    data-aos-anchor-placement="top-center" 
+                    data-aos-delay="100"
+                >
                     <input type="text" placeholder="Name" className="px-4 py-3.5 text-white outline-none rounded-md w-full bg-[#363659] placeholder:text-white/70" />
                     <input type="email" placeholder="Email Address" className="px-4 mt-6 py-3.5 text-white outline-none rounded-md w-full bg-[#363659] placeholder:text-white/70" />
                     <input type="number" placeholder="Mobile Number" className="px-4 mt-6 py-3.5 text-white outline-none rounded-md w-full bg-[#363659] placeholder:text-white/70" />
-                    <textarea placeholder="Your Message" className="px-4 mt-6 py-3.5 text-white outline-none rounded-md w-full bg-[#363659] placeholder:text-white/70 h-[10rem]"></textarea>
+                    <textarea placeholder="Your Message" className="px-4 mt-6 py-3.5 text-white outline-none rounded-md w-full bg-[#363659] placeholder:text-white/70 h-40"></textarea>
                     <button className="mt-8 px-12 py-4 bg-blue-950 text-white hover:bg-blue-900 rounded-full transition-all duration-300 cursor-pointer">Send Message</button>
                 </div>
             </div>
