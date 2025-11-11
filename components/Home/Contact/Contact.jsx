@@ -1,3 +1,5 @@
+"use client";
+
 import { useState } from "react"
 import { BiEnvelope, BiMap, BiPhone } from "react-icons/bi"
 import { FaFacebookF, FaGithub, FaInstagram, FaTwitter } from "react-icons/fa"
