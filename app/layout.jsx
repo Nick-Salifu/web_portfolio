@@ -10,7 +10,7 @@ const font = Inter({
 })
 
 export const metadata = {
-  title: "Nick - Portfolio",
+  title: "Nick's - Portfolio",
   description: "My web portfolio",
 };
 
