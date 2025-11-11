@@ -1,4 +1,6 @@
 import Image from "next/image"
+import { BsArrow90DegRight, BsArrowBarRight } from "react-icons/bs"
+
 
 const Projects = () => {
   return (
@@ -14,14 +16,21 @@ const Projects = () => {
                     data-aos="fade-up" 
                     data-aos-anchor-placement="top-center" 
                     data-aos-delay="0" 
-                    src="/images/p1.jpg" 
+                    src="/images/spike.png" 
                     alt="image" 
                     width={800} 
                     height={650} 
                     className="rounded-lg" 
                 />
-                <h1 className="mt-4 text-xl sm:text-2xl font-semibold text-white">Modern Finance Dashboard UI</h1>
-                <h1 className="text-white/80 font-medium pt-2">Apps, UI/UX</h1>
+                <h1 className="mt-4 text-xl sm:text-2xl font-semibold text-white">Property Listing Website</h1>
+                <a 
+                    href="https://spike-properties.vercel.app"
+                    target="_blank"
+                    className="px-3 py-1 mt-2 bg-blue-500 rounded-full text-gray-300 hover:bg-blue-600 flex items-center space-x-2 transition-all duration-300 w-18"
+                >
+                    Live
+                    <BsArrowBarRight className="w-5 h-5 text-white font-bold" />
+                </a>
             </div>
             {/* Second Project */}
             <div>
@@ -29,14 +38,21 @@ const Projects = () => {
                     data-aos="fade-up" 
                     data-aos-anchor-placement="top-center" 
                     data-aos-delay="100" 
-                    src="/images/p2.jpg" 
+                    src="/images/spike.png" 
                     alt="image" 
                     width={800} 
                     height={650} 
                     className="rounded-lg" 
                 />
-                <h1 className="mt-4 text-xl sm:text-2xl font-semibold text-white">Portfolio Website for Creatives</h1>
-                <h1 className="text-white/80 font-medium pt-2">Branding, Motion</h1>
+                <h1 className="mt-4 text-xl sm:text-2xl font-semibold text-white">Property Listing Website</h1>
+                <a 
+                    href="https://spike-properties.vercel.app"
+                    target="_blank"
+                    className="px-3 py-1 mt-2 bg-blue-500 rounded-full text-gray-300 hover:bg-blue-600 flex items-center space-x-2 transition-all duration-300 w-18"
+                >
+                    Live
+                    <BsArrowBarRight className="w-5 h-5 text-white font-bold" />
+                </a>
             </div>
             {/* Third Project */}
             <div>
@@ -44,14 +60,21 @@ const Projects = () => {
                     data-aos="fade-up" 
                     data-aos-anchor-placement="top-center" 
                     data-aos-delay="200" 
-                    src="/images/p3.jpg" 
+                    src="/images/spike.png" 
                     alt="image" 
                     width={800} 
                     height={650} 
                     className="rounded-lg" 
                 />
-                <h1 className="mt-4 text-xl sm:text-2xl font-semibold text-white">Brand identity for Startups</h1>
-                <h1 className="text-white/80 font-medium pt-2">Branding, UI/UX</h1>
+                <h1 className="mt-4 text-xl sm:text-2xl font-semibold text-white">Property Listing Website</h1>
+                <a 
+                    href="https://spike-properties.vercel.app"
+                    target="_blank"
+                    className="px-3 py-1 mt-2 bg-blue-500 rounded-full text-gray-300 hover:bg-blue-600 flex items-center space-x-2 transition-all duration-300 w-18"
+                >
+                    Live
+                    <BsArrowBarRight className="w-5 h-5 text-white font-bold" />
+                </a>
             </div>
             {/* Fourth Project */}
             <div>
@@ -59,14 +82,21 @@ const Projects = () => {
                     data-aos="fade-up" 
                     data-aos-anchor-placement="top-center" 
                     data-aos-delay="300" 
-                    src="/images/p4.jpg" 
+                    src="/images/portfolio.png" 
                     alt="image" 
                     width={800} 
                     height={650} 
                     className="rounded-lg" 
                 />
-                <h1 className="mt-4 text-xl sm:text-2xl font-semibold text-white">SaaS Dashboard Development</h1>
-                <h1 className="text-white/80 font-medium pt-2">App, UI/UX</h1>
+                <h1 className="mt-4 text-xl sm:text-2xl font-semibold text-white">My Portfolio</h1>
+                <a 
+                    href="https://spike-properties.vercel.app"
+                    target="_blank"
+                    className="px-3 py-1 mt-2 bg-blue-500 rounded-full text-gray-300 hover:bg-blue-600 flex items-center space-x-2 transition-all duration-300 w-18"
+                >
+                    Live
+                    <BsArrowBarRight className="w-5 h-5 text-white font-bold" />
+                </a>
             </div>
         </div>
     </div>
