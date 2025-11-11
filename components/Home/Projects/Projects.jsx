@@ -1,5 +1,5 @@
 import Image from "next/image"
-import { BsArrow90DegRight, BsArrowBarRight } from "react-icons/bs"
+import { BsArrowBarRight } from "react-icons/bs"
 
 
 const Projects = () => {
