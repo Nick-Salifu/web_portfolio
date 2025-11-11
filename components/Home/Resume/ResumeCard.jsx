@@ -1,4 +1,4 @@
-
+"use client"
 const ResumeCard = ({Icon, role, date, company, children}) => {
   return (
     <div className="mb-6">
